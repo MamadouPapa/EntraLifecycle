@@ -56,6 +56,7 @@ function ConvertTo-ELPlanTextLine {
     $flags = @()
     if ($Action.Risk -eq $script:ELRisk.High) { $flags += '(!)' }
     if ($Action.Status -eq $script:ELStatus.Deferred) { $flags += ('(différé au {0})' -f $Action.DateEffet) }
+    if ($Action.Action -eq 'ScheduleLicenseRemoval') { $flags += ('(retrait le {0})' -f $Action.Parameters.RemovalDate) }
     $line = '  {0} {1} {2}' -f $symbol, ([string]$Action.Action).PadRight($script:ELPlanTextActionWidth), ([string]$Action.Target).PadRight($script:ELPlanTextTargetWidth)
     (($line + ' ' + ($flags -join ' ')).TrimEnd())
 }

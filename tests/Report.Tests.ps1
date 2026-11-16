@@ -98,6 +98,7 @@ Describe 'Format-ELPlan' {
         $Text | Should -Match '- RemoveGroup\s+GRP-Intune-Admins\s+\(!\)'
         $Text | Should -Match '~ SetManager'
         $Text | Should -Match '\(différé au 2026-12-01\)'
+        $Text | Should -Match 'ScheduleLicenseRemoval\s+SPE_F1\s+\(retrait le 2026-12-13\)'
     }
 
     It 'lists errors and ends with the totals' {
