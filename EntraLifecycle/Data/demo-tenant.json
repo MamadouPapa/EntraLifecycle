@@ -1,0 +1,288 @@
+{
+  "_comment": "Tenant fictif du mode démo (domaine contoso.example). Aucune donnée réelle.",
+  "domain": "contoso.example",
+  "groups": [
+    {
+      "id": "6f1c0000-0000-4000-8000-000000000001",
+      "displayName": "GRP-Tous-Collaborateurs"
+    },
+    {
+      "id": "6f1c0000-0000-4000-8000-000000000002",
+      "displayName": "GRP-Direction"
+    },
+    {
+      "id": "6f1c0000-0000-4000-8000-000000000003",
+      "displayName": "GRP-Finance-Comptabilite"
+    },
+    {
+      "id": "6f1c0000-0000-4000-8000-000000000004",
+      "displayName": "GRP-Finance-Controle"
+    },
+    {
+      "id": "6f1c0000-0000-4000-8000-000000000005",
+      "displayName": "GRP-App-PowerBI"
+    },
+    {
+      "id": "6f1c0000-0000-4000-8000-000000000006",
+      "displayName": "GRP-App-Sage"
+    },
+    {
+      "id": "6f1c0000-0000-4000-8000-000000000007",
+      "displayName": "GRP-RH"
+    },
+    {
+      "id": "6f1c0000-0000-4000-8000-000000000008",
+      "displayName": "GRP-IT-Support"
+    },
+    {
+      "id": "6f1c0000-0000-4000-8000-000000000009",
+      "displayName": "GRP-Intune-Admins"
+    },
+    {
+      "id": "6f1c0000-0000-4000-8000-000000000010",
+      "displayName": "GRP-IT-Admins-Serveurs"
+    },
+    {
+      "id": "6f1c0000-0000-4000-8000-000000000011",
+      "displayName": "GRP-Ventes"
+    },
+    {
+      "id": "6f1c0000-0000-4000-8000-000000000012",
+      "displayName": "GRP-Ventes-Managers"
+    },
+    {
+      "id": "6f1c0000-0000-4000-8000-000000000013",
+      "displayName": "GRP-App-CRM"
+    },
+    {
+      "id": "6f1c0000-0000-4000-8000-000000000014",
+      "displayName": "GRP-Projet-Salon2026"
+    }
+  ],
+  "skus": [
+    {
+      "skuId": "05e9a617-0261-4cee-bb44-138d3ef5d965",
+      "skuPartNumber": "SPE_E3"
+    },
+    {
+      "skuId": "06ebc4ee-1bb5-47dd-8120-11324bc54e06",
+      "skuPartNumber": "SPE_E5"
+    },
+    {
+      "skuId": "66b55226-6b4f-492c-910c-a3b7a3c9d993",
+      "skuPartNumber": "SPE_F1"
+    },
+    {
+      "skuId": "f8a1db68-be16-40ed-86d5-cb42ce701560",
+      "skuPartNumber": "POWER_BI_PRO"
+    }
+  ],
+  "users": [
+    {
+      "id": "a0d1e000-0000-4000-8000-000000001001",
+      "employeeId": "E1001",
+      "userPrincipalName": "sophie.martin@contoso.example",
+      "displayName": "Sophie Martin",
+      "department": "Direction",
+      "jobTitle": "Directeur administratif et financier",
+      "usageLocation": "FR",
+      "accountEnabled": true,
+      "managerEmployeeId": null,
+      "groups": [
+        "GRP-Tous-Collaborateurs",
+        "GRP-Direction",
+        "GRP-Finance-Comptabilite",
+        "GRP-App-PowerBI"
+      ],
+      "licenses": [
+        "SPE_E5"
+      ]
+    },
+    {
+      "id": "a0d1e000-0000-4000-8000-000000001002",
+      "employeeId": "E1002",
+      "userPrincipalName": "thomas.bernard@contoso.example",
+      "displayName": "Thomas Bernard",
+      "department": "Informatique",
+      "jobTitle": "Administrateur systèmes",
+      "usageLocation": "FR",
+      "accountEnabled": true,
+      "managerEmployeeId": "E1001",
+      "groups": [
+        "GRP-Tous-Collaborateurs",
+        "GRP-IT-Support",
+        "GRP-IT-Admins-Serveurs"
+      ],
+      "licenses": [
+        "SPE_E5"
+      ]
+    },
+    {
+      "id": "a0d1e000-0000-4000-8000-000000001003",
+      "employeeId": "E1003",
+      "userPrincipalName": "julie.petit@contoso.example",
+      "displayName": "Julie Petit",
+      "department": "Comptabilité",
+      "jobTitle": "Comptable",
+      "usageLocation": "FR",
+      "accountEnabled": true,
+      "managerEmployeeId": "E1001",
+      "groups": [
+        "GRP-Tous-Collaborateurs",
+        "GRP-Finance-Comptabilite",
+        "GRP-App-Sage"
+      ],
+      "licenses": [
+        "SPE_E3"
+      ]
+    },
+    {
+      "id": "a0d1e000-0000-4000-8000-000000001004",
+      "employeeId": "E1004",
+      "userPrincipalName": "karim.haddad@contoso.example",
+      "displayName": "Karim Haddad",
+      "department": "Informatique",
+      "jobTitle": "Technicien support",
+      "usageLocation": "FR",
+      "accountEnabled": true,
+      "managerEmployeeId": "E1002",
+      "groups": [
+        "GRP-Tous-Collaborateurs",
+        "GRP-IT-Support",
+        "GRP-Intune-Admins"
+      ],
+      "licenses": [
+        "SPE_E3"
+      ]
+    },
+    {
+      "id": "a0d1e000-0000-4000-8000-000000001005",
+      "employeeId": "E1005",
+      "userPrincipalName": "nathalie.moreau@contoso.example",
+      "displayName": "Nathalie Moreau",
+      "department": "Ressources humaines",
+      "jobTitle": "Chargé RH",
+      "usageLocation": "FR",
+      "accountEnabled": false,
+      "managerEmployeeId": "E1001",
+      "groups": [],
+      "licenses": [
+        "SPE_E3"
+      ]
+    },
+    {
+      "id": "a0d1e000-0000-4000-8000-000000001006",
+      "employeeId": "E1006",
+      "userPrincipalName": "lucas.girard@contoso.example",
+      "displayName": "Lucas Girard",
+      "department": "Commercial",
+      "jobTitle": "Commercial(e) terrain",
+      "usageLocation": "FR",
+      "accountEnabled": true,
+      "managerEmployeeId": "E1010",
+      "groups": [
+        "GRP-Tous-Collaborateurs",
+        "GRP-Ventes",
+        "GRP-App-CRM",
+        "GRP-Projet-Salon2026"
+      ],
+      "licenses": [
+        "SPE_F1"
+      ]
+    },
+    {
+      "id": "a0d1e000-0000-4000-8000-000000001007",
+      "employeeId": "E1007",
+      "userPrincipalName": "antoine.lefevre@contoso.example",
+      "displayName": "Antoine Lefèvre",
+      "department": "Informatique",
+      "jobTitle": "Administrateur systèmes",
+      "usageLocation": "FR",
+      "accountEnabled": true,
+      "managerEmployeeId": "E1002",
+      "groups": [
+        "GRP-Tous-Collaborateurs",
+        "GRP-IT-Support",
+        "GRP-IT-Admins-Serveurs"
+      ],
+      "licenses": [
+        "SPE_E5"
+      ],
+      "directoryRoles": [
+        "User Administrator"
+      ]
+    },
+    {
+      "id": "a0d1e000-0000-4000-8000-000000001008",
+      "employeeId": "E1008",
+      "userPrincipalName": "camille.dubois@contoso.example",
+      "displayName": "Camille Dubois",
+      "department": "Comptabilité",
+      "jobTitle": "Comptable",
+      "usageLocation": "FR",
+      "accountEnabled": true,
+      "managerEmployeeId": "E1001",
+      "groups": [
+        "GRP-Tous-Collaborateurs",
+        "GRP-Finance-Comptabilite",
+        "GRP-App-Sage"
+      ],
+      "licenses": [
+        "SPE_E3"
+      ]
+    },
+    {
+      "id": "a0d1e000-0000-4000-8000-000000001009",
+      "employeeId": "E2007",
+      "userPrincipalName": "ines.fontaine@contoso.example",
+      "displayName": "Inès Fontaine",
+      "department": "Commercial",
+      "jobTitle": "Responsable commercial",
+      "usageLocation": "FR",
+      "accountEnabled": true,
+      "managerEmployeeId": null,
+      "groups": [
+        "GRP-Tous-Collaborateurs"
+      ],
+      "licenses": []
+    },
+    {
+      "id": "a0d1e000-0000-4000-8000-000000001010",
+      "employeeId": "E1010",
+      "userPrincipalName": "marc.leroy@contoso.example",
+      "displayName": "Marc Leroy",
+      "department": "Commercial",
+      "jobTitle": "Responsable commercial",
+      "usageLocation": "FR",
+      "accountEnabled": true,
+      "managerEmployeeId": "E1001",
+      "groups": [
+        "GRP-Tous-Collaborateurs",
+        "GRP-Ventes",
+        "GRP-Ventes-Managers",
+        "GRP-App-CRM"
+      ],
+      "licenses": [
+        "SPE_E3"
+      ]
+    },
+    {
+      "id": "a0d1e000-0000-4000-8000-000000009001",
+      "employeeId": null,
+      "userPrincipalName": "svc-sauvegarde@contoso.example",
+      "displayName": "Compte de service sauvegarde",
+      "accountEnabled": true,
+      "groups": [],
+      "licenses": []
+    },
+    {
+      "id": "a0d1e000-0000-4000-8000-000000009002",
+      "employeeId": null,
+      "userPrincipalName": "bg-admin01@contoso.example",
+      "displayName": "Compte d'urgence (break-glass)",
+      "accountEnabled": true,
+      "groups": [],
+      "licenses": []
+    }
+  ]
+}

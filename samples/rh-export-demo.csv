@@ -1,0 +1,17 @@
+﻿Matricule;Prenom;Nom;Service;Poste;Manager;DateEffet;Mouvement
+E2001;Camille;Dubois;Comptabilité;Comptable;E1001;2026-11-16;Arrivee
+E2002;Élodie;Gérard-Lefèvre;Informatique;Technicien support;E1002;2026-11-16;Arrivée
+E2003;Jean-François;N'Diaye;Ressources humaines;Chargé RH;E1001;2026-11-16;Arrivee
+E2005;Hugo;Lambert;Commercial;Responsable commercial;E1001;2026-11-16;Arrivee
+E2004;Chloé;Rousseau;Commercial;Commercial terrain;E2005;2026-12-01;Arrivee
+E2006;Camille;Dubois;Commercial;Commercial terrain;E1010;2026-11-16;Arrivee
+E2007;Inès;Fontaine;Commercial;Responsable commercial;E1001;2026-11-02;Arrivee
+E1003;Julie;Petit;Comptabilité;Contrôleur de gestion;E1001;2026-11-16;Mutation
+E1004;Karim;Haddad;Commercial;Commercial terrain;E1010;2026-11-16;Mutation
+E1005;Nathalie;Moreau;Ressources humaines;Chargé RH;E1001;2026-09-30;Depart
+E1006;Lucas;Girard;Commercial;Commercial terrain;E1010;2026-11-13;Départ
+E1007;Antoine;Lefèvre;Informatique;Administrateur systèmes;E1002;2026-11-16;Depart
+E2008;Sarah;Benali;Marketing;Community manager;E1001;2026-11-16;Arrivee
+E2009;Paul;Martin;Comptabilité;Comptable;E1001;16/11/2026;Arrivee
+E2010' or 1 eq 1;Eve;Martin;Comptabilité;Comptable;E1001;2026-11-16;Arrivee
+E9999;Léa;Simon;Comptabilité;Comptable;E1001;2026-11-16;Mutation

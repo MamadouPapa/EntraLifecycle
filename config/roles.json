@@ -1,0 +1,59 @@
+{
+  "settings": {
+    "upnDomain": "contoso.example",
+    "leaverLicenseRetentionDays": 30,
+    "defaultUsageLocation": "FR",
+    "privilegedGroups": ["GRP-IT-Admins-Serveurs", "GRP-Intune-Admins"]
+  },
+  "roles": [
+    {
+      "service": "Direction",
+      "poste": "Directeur administratif et financier",
+      "groups": ["GRP-Tous-Collaborateurs", "GRP-Direction", "GRP-Finance-Comptabilite", "GRP-App-PowerBI"],
+      "licenses": ["SPE_E5"]
+    },
+    {
+      "service": "Comptabilité",
+      "poste": "Comptable",
+      "groups": ["GRP-Tous-Collaborateurs", "GRP-Finance-Comptabilite", "GRP-App-Sage"],
+      "licenses": ["SPE_E3"]
+    },
+    {
+      "service": "Comptabilité",
+      "poste": "Contrôleur de gestion",
+      "groups": ["GRP-Tous-Collaborateurs", "GRP-Finance-Comptabilite", "GRP-Finance-Controle", "GRP-App-PowerBI"],
+      "licenses": ["SPE_E3", "POWER_BI_PRO"]
+    },
+    {
+      "service": "Ressources humaines",
+      "poste": "Chargé RH",
+      "groups": ["GRP-Tous-Collaborateurs", "GRP-RH", "GRP-App-SIRH"],
+      "licenses": ["SPE_E3"]
+    },
+    {
+      "service": "Informatique",
+      "poste": "Technicien support",
+      "groups": ["GRP-Tous-Collaborateurs", "GRP-IT-Support", "GRP-Intune-Admins"],
+      "licenses": ["SPE_E3"]
+    },
+    {
+      "service": "Informatique",
+      "poste": "Administrateur systèmes",
+      "groups": ["GRP-Tous-Collaborateurs", "GRP-IT-Support", "GRP-IT-Admins-Serveurs"],
+      "licenses": ["SPE_E5"]
+    },
+    {
+      "service": "Commercial",
+      "poste": "Commercial terrain",
+      "jobTitle": "Commercial(e) terrain",
+      "groups": ["GRP-Tous-Collaborateurs", "GRP-Ventes", "GRP-App-CRM"],
+      "licenses": ["SPE_F1"]
+    },
+    {
+      "service": "Commercial",
+      "poste": "Responsable commercial",
+      "groups": ["GRP-Tous-Collaborateurs", "GRP-Ventes", "GRP-Ventes-Managers", "GRP-App-CRM"],
+      "licenses": ["SPE_E3"]
+    }
+  ]
+}

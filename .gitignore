@@ -1,0 +1,24 @@
+# Real HR exports, plans and audit trails contain personal data: never commit them.
+*.csv
+!samples/rh-export-demo.csv
+audit/
+*.jsonl
+!docs/demo-audit.jsonl
+plan*.html
+reports/
+output/
+
+# The demo outputs (fictional tenant) are the only generated files meant to be versioned.
+!docs/demo-report.html
+
+# Pester / coverage
+testResults.xml
+TestResults/
+coverage.xml
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
