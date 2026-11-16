@@ -1,0 +1,113 @@
+EntraLifecycle - plan rh-export-demo.csv (domaine contoso.example, date de référence 2026-11-16) [MODE DÉMO - tenant fictif]
+Symboles : + création/ajout, ~ modification, - retrait/révocation, . information, (!) risque élevé
+
+  # E2001 - Arrivée - camille.dubois2@contoso.example
+  + CreateUser                 camille.dubois2@contoso.example
+  + AddGroup                   GRP-Tous-Collaborateurs
+  + AddGroup                   GRP-Finance-Comptabilite
+  + AddGroup                   GRP-App-Sage
+  + AssignLicense              SPE_E3
+  ~ SetManager                 sophie.martin@contoso.example
+  + IssueTemporaryAccessPass   camille.dubois2@contoso.example
+
+  # E2002 - Arrivée - elodie.gerard-lefevre@contoso.example
+  + CreateUser                 elodie.gerard-lefevre@contoso.example
+  + AddGroup                   GRP-Tous-Collaborateurs
+  + AddGroup                   GRP-IT-Support
+  + AddGroup                   GRP-Intune-Admins                        (!)
+  + AssignLicense              SPE_E3
+  ~ SetManager                 thomas.bernard@contoso.example
+  + IssueTemporaryAccessPass   elodie.gerard-lefevre@contoso.example
+
+  # E2003 - Arrivée - jean-francois.ndiaye@contoso.example
+  + CreateUser                 jean-francois.ndiaye@contoso.example
+  + AddGroup                   GRP-Tous-Collaborateurs
+  + AddGroup                   GRP-RH
+  + AssignLicense              SPE_E3
+  ~ SetManager                 sophie.martin@contoso.example
+  + IssueTemporaryAccessPass   jean-francois.ndiaye@contoso.example
+
+  # E2005 - Arrivée - hugo.lambert@contoso.example
+  + CreateUser                 hugo.lambert@contoso.example
+  + AddGroup                   GRP-Tous-Collaborateurs
+  + AddGroup                   GRP-Ventes
+  + AddGroup                   GRP-Ventes-Managers
+  + AddGroup                   GRP-App-CRM
+  + AssignLicense              SPE_E3
+  ~ SetManager                 sophie.martin@contoso.example
+  + IssueTemporaryAccessPass   hugo.lambert@contoso.example
+
+  # E2004 - Arrivée - chloe.rousseau@contoso.example
+  + CreateUser                 chloe.rousseau@contoso.example           (différé au 2026-12-01)
+  + AddGroup                   GRP-Tous-Collaborateurs                  (différé au 2026-12-01)
+  + AddGroup                   GRP-Ventes                               (différé au 2026-12-01)
+  + AddGroup                   GRP-App-CRM                              (différé au 2026-12-01)
+  + AssignLicense              SPE_F1                                   (différé au 2026-12-01)
+  ~ SetManager                 E2005                                    (différé au 2026-12-01)
+  + IssueTemporaryAccessPass   chloe.rousseau@contoso.example           (différé au 2026-12-01)
+
+  # E2006 - Arrivée - camille.dubois3@contoso.example
+  + CreateUser                 camille.dubois3@contoso.example
+  + AddGroup                   GRP-Tous-Collaborateurs
+  + AddGroup                   GRP-Ventes
+  + AddGroup                   GRP-App-CRM
+  + AssignLicense              SPE_F1
+  ~ SetManager                 marc.leroy@contoso.example
+  + IssueTemporaryAccessPass   camille.dubois3@contoso.example
+
+  # E2007 - Arrivée - ines.fontaine@contoso.example
+  . SkipExisting               ines.fontaine@contoso.example
+  + AddGroup                   GRP-Ventes
+  + AddGroup                   GRP-Ventes-Managers
+  + AddGroup                   GRP-App-CRM
+  + AssignLicense              SPE_E3
+  ~ SetManager                 sophie.martin@contoso.example
+
+  # E1003 - Mutation - julie.petit@contoso.example
+  ~ UpdateAttributes           julie.petit@contoso.example
+  - RemoveGroup                GRP-App-Sage
+  + AddGroup                   GRP-Finance-Controle
+  + AddGroup                   GRP-App-PowerBI
+  + AssignLicense              POWER_BI_PRO
+
+  # E1004 - Mutation - karim.haddad@contoso.example
+  ~ UpdateAttributes           karim.haddad@contoso.example
+  - RemoveGroup                GRP-IT-Support
+  - RemoveGroup                GRP-Intune-Admins                        (!)
+  + AddGroup                   GRP-Ventes
+  + AddGroup                   GRP-App-CRM
+  + AssignLicense              SPE_F1
+  - RemoveLicense              SPE_E3
+  ~ SetManager                 marc.leroy@contoso.example
+
+  # E1005 - Départ - nathalie.moreau@contoso.example
+  - RemoveLicense              SPE_E3
+
+  # E1006 - Départ - lucas.girard@contoso.example
+  - DisableAccount             lucas.girard@contoso.example
+  - RevokeSessions             lucas.girard@contoso.example
+  - RemoveGroup                GRP-Tous-Collaborateurs
+  - RemoveGroup                GRP-Ventes
+  - RemoveGroup                GRP-App-CRM
+  . ScheduleLicenseRemoval     SPE_F1                                   (retrait le 2026-12-13)
+
+  # E1007 - Départ - antoine.lefevre@contoso.example
+  - DisableAccount             antoine.lefevre@contoso.example          (!)
+  - RevokeSessions             antoine.lefevre@contoso.example
+  - RemoveGroup                GRP-Tous-Collaborateurs
+  - RemoveGroup                GRP-IT-Support
+  - RemoveGroup                GRP-IT-Admins-Serveurs                   (!)
+  . ScheduleLicenseRemoval     SPE_E5                                   (retrait le 2026-12-16)
+
+Erreurs (lignes non traitées) (4) :
+  ! ligne 14 [E2008] Service/Poste absent du catalogue des rôles : « Marketing / Community manager »
+  ! ligne 15 [E2009] Date d'effet invalide « 16/11/2026 » (format attendu : aaaa-MM-jj)
+  ! ligne 16 [E2010' or 1 eq 1] Matricule invalide « E2010' or 1 eq 1 » (lettres, chiffres, tiret ou souligné, 32 caractères maximum)
+  ! ligne 17 [E9999] Mutation impossible : aucun compte ne porte l'employeeId E9999 (vérifier l'export RH ou traiter comme une arrivée)
+
+Avertissements (2) :
+  ! ligne 4 [E2003] Groupe « GRP-App-SIRH » introuvable dans le tenant : ajout ignoré
+  ! ligne 12 [E1006] 1 appartenance(s) hors catalogue conservée(s) sur le compte désactivé : revue manuelle par les propriétaires des groupes
+
+Plan : 46 à créer/ajouter, 10 à modifier, 15 à retirer/révoquer (7 différée(s), 4 à risque élevé) ; 4 erreur(s), 2 avertissement(s).
+Rien n'est modifié tant que Invoke-ELPlan n'est pas exécuté et confirmé.
